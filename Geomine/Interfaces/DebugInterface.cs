@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Geomine.Interfaces
 {
-    class DebugInterface
+    public class DebugInterface : Interface
     {
         private Debug.GraphicForm mainForm = new Debug.GraphicForm();
 
@@ -17,12 +18,22 @@ namespace Geomine.Interfaces
 
         }
 
-        public void ShowForm(System.Windows.Forms.Form formInstance )
+        public void Initialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void ShowForm(System.Windows.Forms.Form formInstance )
         {
 
-            formInstance.Show();
+            Application.EnableVisualStyles();
+            Application.Run(formInstance);
 
         }
 
+        public void Terminate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

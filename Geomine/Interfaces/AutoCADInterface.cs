@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.Runtime;
+
 
 namespace Geomine.Interfaces
 {
-    class AutoCADInterface
+    public class AutoCADInterface : Interface
     {
-        
-        [Autodesk.AutoCAD.Runtime.CommandMethod("OPLine")]
-         public void OPLine()
+        public override void ShowForm(System.Windows.Forms.Form formInstance)
         {
-
+            Application.ShowModelessDialog(formInstance);
         }
 
     }
+
 }

@@ -1,0 +1,36 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Geomine.UIComponents"
+             xmlns:Controls="clr-namespace:System.Windows.Controls;assembly=MultiSelectTreeView" x:Class="Geomine.UIComponents.ProjectTreeView"
+             mc:Ignorable="d" Height="494.262" Width="287.295" Background="{DynamicResource {x:Static SystemColors.MenuBarBrushKey}}">
+    <Grid Margin="0,0,412,186">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="280*"/>
+            <RowDefinition/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+        <Controls:MultiSelectTreeView HorizontalAlignment="Left" Height="477" Margin="1,64,-287,-233" Grid.RowSpan="3" VerticalAlignment="Top" Width="286"/>
+        <Button x:Name="button" Content="New Geomine Project" HorizontalAlignment="Right" Height="35" Margin="0,0,-192,0" VerticalAlignment="Top" Width="191"/>
+        <StackPanel Orientation="Horizontal" Margin="1,36,-287,0" Height="25" VerticalAlignment="Top">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4FB99C" Offset="0"/>
+                    <GradientStop Color="#FFF1F1F1" Offset="0.407"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label x:Name="label" Content="Project Explorer" Width="212" Margin="0,0,0,-7"/>
+            <Button Margin="6,0,0,0" Padding="2" x:Name="ToggleSelectButton" ToolTip="Toggle selections" Width="26">
+                <Image Source="/Geomine;component/Images/select_toggle_11.png" Width="11" Height="11"/>
+            </Button>
+            <Button Margin="6,0,0,0" Padding="2" x:Name="ToggleSelectButton_Copy" ToolTip="Toggle selections" Width="26">
+                <Image Source="/Geomine;component/Images/search.png" Width="20" Height="20"/>
+            </Button>
+
+
+        </StackPanel>
+        <Button x:Name="button_Copy" Content="Run" HorizontalAlignment="Left" Height="35" Margin="192,0,-287,0" VerticalAlignment="Top" Width="95"/>
+    </Grid>
+</UserControl>

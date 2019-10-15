@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,14 +12,16 @@ namespace Geomine
 {
     public class App
     {
-       static DebugInterface appInterface = new DebugInterface();
+       static Interface appInterface;
 
-
-        static void Main()
+        [STAThreadAttribute]
+        public static void Main()
         {
+            string str = Assembly.GetExecutingAssembly().CodeBase;
+            if (str[str.Length - 1]!= 'e') appInterface = new AutoCADInterface(); else appInterface = new DebugInterface();
 
-            Application.EnableVisualStyles();
-            Application.Run(new ProjectManager());
+            appInterface.ShowForm(new ProjectManager());
+
 
 
         }

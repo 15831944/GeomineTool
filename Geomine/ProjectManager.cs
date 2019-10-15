@@ -20,13 +20,11 @@ namespace Geomine
         {
             InitializeComponent();
             InitializeTreeTypes();
-            treeViewInstance.Nodes.AddRange(treeFolders.First());
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-
-        }
+                    }
 
         private void ProjectManager_Load(object sender, EventArgs e)
         {
@@ -49,6 +47,16 @@ namespace Geomine
             TreeNode engineerDesigns = new TreeNode("");
 
             treeFolders.Add("all", new TreeNode[] {  });
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void elementHost1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
 
         }
     }
