@@ -1,0 +1,38 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Geomine.UIComponents"
+             xmlns:fluent="urn:fluent-ribbon" x:Class="Geomine.UIComponents.LoadingMenu"
+             mc:Ignorable="d" 
+             d:DesignHeight="400"  d:DesignWidth="250" Background="#FFD8D3CA" Opacity="0.95" Foreground="#FF913535" >
+    <UserControl.Effect>
+        <fluent:GrayscaleEffect/>
+    </UserControl.Effect>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="button" Content="Pause" HorizontalAlignment="Center" Height="25" Margin="0,10,0,0" VerticalAlignment="Top" Width="50" Background="#FFD8D3CA" Grid.Column="1" Grid.RowSpan="2"/>
+        <Button x:Name="button2" Content="Run" HorizontalAlignment="Center" Height="25" Margin="-120,10,0,0" VerticalAlignment="Top" Width="50" Background="#FFD8D3CA" Grid.Column="1" Grid.RowSpan="2"/>
+        <Button x:Name="button3" Content="Log" HorizontalAlignment="Center" Height="25" Margin="120,10,0,0" VerticalAlignment="Top" Width="50" Background="#FFD8D3CA" Grid.Column="1" Grid.RowSpan="2"/>
+        <DockPanel Grid.Row="2" Grid.Column="1">
+            <TextBlock DockPanel.Dock="Right" Height="21" Margin="5,0,0,0"  VerticalAlignment="Center" HorizontalAlignment="Right" Text="00:00" Foreground="Black" FontSize="16"/>
+            <ProgressBar Height="23" VerticalAlignment="Center" />
+        </DockPanel>
+        <DockPanel Grid.Row="3" Grid.Column="1" >
+            <ListBox x:Name="listBox"  Margin="0,5,0,0"  />
+        </DockPanel>
+
+    </Grid>
+</UserControl>

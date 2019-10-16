@@ -185,15 +185,21 @@
       <DependentUpon>ProjectManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIComponents\GeomineTreeView.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="UIComponents\LoadingMenu.xaml.cs">
+      <DependentUpon>LoadingMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\GeomineTreeView.Designer.cs">
-      <DependentUpon>GeomineTreeView.cs</DependentUpon>
-    </Compile>
+    <Compile Include="UIComponents\MultiViewTree\ColorItemViewModel.cs" />
+    <Compile Include="UIComponents\MultiViewTree\TreeItemViewModel.cs" />
     <Compile Include="UIComponents\ProjectTreeView.xaml.cs">
       <DependentUpon>ProjectTreeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\test.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\TypeTemplateSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
@@ -206,8 +212,8 @@
     <EmbeddedResource Include="ProjectManager.resx">
       <DependentUpon>ProjectManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\GeomineTreeView.resx">
-      <DependentUpon>GeomineTreeView.cs</DependentUpon>
+    <EmbeddedResource Include="UIComponents\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +221,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="UIComponents\LoadingMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UIComponents\ProjectTreeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

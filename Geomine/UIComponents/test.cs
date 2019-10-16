@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Geomine.UIComponents
 {
-    public partial class GeomineTreeView : UserControl
+    public partial class test : UserControl
     {
-        public GeomineTreeView()
+        public test()
         {
             InitializeComponent();
         }
